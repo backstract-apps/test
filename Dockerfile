@@ -1,10 +1,12 @@
-FROM python:3-alpine3.10
+FROM python:3.10-slim
 
 WORKDIR /usr/src/app
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
+
+RUN echo "hi there"
 
 # copy requirements file
 COPY ./requirements.txt /usr/src/app/requirements.txt
