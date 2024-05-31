@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+gunicorn
+httpx
+loguru
+odmantic
+motor
+sqlalchemy
+psycopg2-binary
