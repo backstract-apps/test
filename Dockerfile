@@ -14,8 +14,7 @@ COPY ./requirements.txt /usr/src/app/requirements.txt
 RUN apt-get update && apt-get install -y build-essential libssl-dev libffi-dev python3-dev
 
 # install dependencies
-RUN set -eux \
-    && apk add --no-cache --virtual .build-deps build-base \
+RUN apk add --no-cache --virtual .build-deps build-base \
         libressl-dev libffi-dev gcc musl-dev python3-dev \
         postgresql-dev bash \
     && pip install --upgrade pip setuptools wheel \
