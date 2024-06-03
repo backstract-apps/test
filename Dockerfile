@@ -34,4 +34,4 @@ COPY --from=build /usr/local/bin/gunicorn /usr/local/bin/gunicorn
 COPY . .
 
 # Run the application
-CMD ["gunicorn", "main:app", "--workers", "4", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8008"]
+CMD ["gunicorn", "main:app", "--workers", "1", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8008"]
